@@ -1,51 +1,140 @@
 ﻿using UnityEngine;
+using System.Collections;
 using UnityEngine.UI;
-using System.IO;
-using System.Xml;
 
 public class Quiz : MonoBehaviour {
 
+	// Time Handler
 	public float tiempoPorPregunta;
 	public Text timeLabel;
-	public TextAsset PreguntasXML;
-	public Text preguntaLabel;
-	public Text opcion1;
-	public Text opcion2;
-	public Text opcion3;
-	public Text opcion4;
-	private string preguntaHolder;
-	private string respuesta1;
-	private string respuesta2;
-	private string respuesta3;
-	private string respuesta4;
-	
+
+	// Audio
+	public AudioClip correctSound;
+	public AudioClip incorrectSound;
+	private AudioSource source;
+
+	// Penalización
+	public GameObject plus15;
+	public GameObject minus15;
+	public GameObject parentTime;
+
+	// Puntaje	
+	private float puntaje = 0;
+	private int badCount = 0;
+	public GameObject cuentaPuntaje;
+	public Text puntajeObtenido;
+	public Text totalGanado;
+	public float multiplicadorFloat;
+	private float totalFloat;
+
+	// Siguiente Preguntas
+	private int numEtapa = 0;
+
+	// Preguntas
+	public GameObject[] arrayPreguntas;
+
 	void Awake() {
-		if (PreguntasXML != null) {
-			XmlTextReader reader = new XmlTextReader(new StringReader(PreguntasXML.text));
-			while (reader.Read()) {
-				if (reader.Name == "Pregunta") {
-					preguntaHolder = reader.GetAttribute("TextoPregunta");
-					respuesta1 = reader.GetAttribute("Respuesta1");
-					respuesta2 = reader.GetAttribute("Respuesta2");
-					respuesta3 = reader.GetAttribute("Respuesta3");
-					respuesta4 = reader.GetAttribute("Respuesta4");
-                    Debug.Log(reader.Name + " " + reader.GetAttribute("RespuestaCorrecta"));
-				}
-			}
-		}		
+		source = GetComponent<AudioSource>();
 	}
 
 	void Start () {
-		preguntaLabel.text = preguntaHolder;
-		opcion1.text = respuesta1;
-		opcion2.text = respuesta2;
-		opcion3.text = respuesta3;
-		opcion4.text = respuesta4;
-		timeLabel.text = "" + ((int)tiempoPorPregunta);
+		ShuffleArray(arrayPreguntas);
+		arrayPreguntas[numEtapa].SetActive(true);
+		// Time Handler
+		timeLabel.text = "" + ((int)tiempoPorPregunta);	
 	}
 	
 	void Update () {
+
+		// Time Handler
 		tiempoPorPregunta -= Time.deltaTime;
 		timeLabel.text = "" + ((int)tiempoPorPregunta);
+		if (tiempoPorPregunta == 0) {
+			Debug.Log("Se acabó el tiempo!");
+			StartCoroutine(RecuentoPuntaje());
+		}
+	}
+
+	public static void ShuffleArray<T>(T[] arr) {
+		for (int i = arr.Length - 1; i > 0; i--) {
+			int r = Random.Range(0, i);
+			T tmp = arr[i];
+			arr[i] = arr[r];
+			arr[r] = tmp;
+		}
+	}
+
+	public void calcularPuntaje() {
+		switch (badCount) {
+			case 3:
+				puntaje += 0;
+				break;
+			case 2:
+				puntaje += 1;
+				break;
+			case 1:
+				puntaje += 3;
+				break;
+			case 0:
+				puntaje += 5;
+				break;
+			default:
+				puntaje += 0;
+				break;
+        }
+		badCount = 0;
+	}
+
+	public void siguientePregunta() {
+		if (numEtapa < (arrayPreguntas.Length-1)) {
+			numEtapa++;
+			arrayPreguntas[numEtapa - 1].SetActive(false); //Desactivo la pregunta anterior
+			arrayPreguntas[numEtapa].SetActive(true); //Activo la pregunta actual
+		} else {
+			StartCoroutine(RecuentoPuntaje());
+		}	
+	}
+
+	IEnumerator RecuentoPuntaje() {
+		arrayPreguntas[numEtapa].SetActive(false);
+		cuentaPuntaje.SetActive(true);
+		totalFloat = puntaje*multiplicadorFloat;
+		Wallet.monedas += ((int)totalFloat);
+		puntajeObtenido.GetComponent<Text>().enabled = true;
+		for (int i = 0; i <= puntaje; i++) {
+			puntajeObtenido.text = "" + i;
+			yield return new WaitForSeconds(0.01f);
+		}
+		totalGanado.GetComponent<Text>().enabled = true;
+		for (float k = 0; k <= totalFloat; k++) {
+			totalGanado.text = "" + k;
+			yield return new WaitForSeconds(0.01f);
+		}
+		Debug.Log("Se acabó el Array");
+	}
+	
+	public void Correcto(Button btnCorrect) {
+		calcularPuntaje();
+		btnCorrect.interactable = false;
+		tiempoPorPregunta = tiempoPorPregunta + 15;
+		GameObject go = Instantiate(plus15, new Vector3 (0,0,0), Quaternion.identity) as GameObject;
+		go.transform.SetParent(parentTime.transform, false);
+		ColorBlock colorBlock = btnCorrect.GetComponent<Button>().colors;
+		colorBlock.disabledColor = new Color(142/255f, 189/255f, 119/255f, 1.0f);
+		btnCorrect.GetComponent<Button>().colors = colorBlock;
+		source.PlayOneShot(correctSound,1);
+		siguientePregunta();
+	}
+
+	public void Incorrecto(Button btnWrong) {
+		badCount = badCount + 1;
+		btnWrong.interactable = false;
+		tiempoPorPregunta = tiempoPorPregunta - 15;
+		GameObject go = Instantiate(minus15, new Vector3 (0,0,0), Quaternion.identity) as GameObject;
+		go.transform.SetParent(parentTime.transform, false);
+		ColorBlock colorBlock = btnWrong.GetComponent<Button>().colors;
+		colorBlock.disabledColor = new Color(228/255f, 144/255f, 157/255f, 1.0f);
+		btnWrong.GetComponent<Button>().colors = colorBlock;
+		source.PlayOneShot(incorrectSound,1);
 	}
 }

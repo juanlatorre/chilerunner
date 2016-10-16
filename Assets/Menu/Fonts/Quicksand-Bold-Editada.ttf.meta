@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: e19be2fb145ab234cab68bb549c5c3dc
-timeCreated: 1476203844
+guid: dd76557d6d9778f49a679724f50b4ba8
+timeCreated: 1476543097
 licenseType: Free
 TrueTypeFontImporter:
   serializedVersion: 4
@@ -12,6 +12,7 @@ TrueTypeFontImporter:
   fontNames:
   - Quicksand
   fallbackFontReferences:
+  - {fileID: 12800000, guid: e19be2fb145ab234cab68bb549c5c3dc, type: 3}
   - {fileID: 12800000, guid: 0110df4c5b8308c4f97f3b20c64f1c33, type: 3}
   customCharacters: 
   fontRenderingMode: 0
