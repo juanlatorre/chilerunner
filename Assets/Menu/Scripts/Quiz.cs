@@ -7,6 +7,7 @@ public class Quiz : MonoBehaviour {
 	// Time Handler
 	public float tiempoPorPregunta;
 	public Text timeLabel;
+	private bool variableTrucha = true;
 
 	// Audio
 	public AudioClip correctSound;
@@ -46,14 +47,16 @@ public class Quiz : MonoBehaviour {
 	}
 	
 	void Update () {
-
-		// Time Handler
-		tiempoPorPregunta -= Time.deltaTime;
-		timeLabel.text = "" + ((int)tiempoPorPregunta);
-		if (tiempoPorPregunta == 0) {
-			Debug.Log("Se acabó el tiempo!");
-			StartCoroutine(RecuentoPuntaje());
-		}
+		if (variableTrucha == true) {
+			// Time Handler
+			tiempoPorPregunta -= Time.deltaTime;
+			timeLabel.text = "" + ((int)tiempoPorPregunta);
+			if (tiempoPorPregunta <= 0) {
+				Debug.Log("Se acabó el tiempo!");
+				StartCoroutine(RecuentoPuntaje());
+				variableTrucha = false;
+			}
+		}	
 	}
 
 	public static void ShuffleArray<T>(T[] arr) {
