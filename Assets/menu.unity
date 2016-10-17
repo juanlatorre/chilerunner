@@ -2945,7 +2945,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Arturo Pratt
+  m_Text: Arturo Prat
 --- !u!222 &223866835
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5180,7 +5180,7 @@ RectTransform:
   m_RootOrder: 0
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 112.19348, y: -126.191345}
+  m_AnchoredPosition: {x: 112.38391, y: -126.09146}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &455016608
@@ -5223,7 +5223,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1475198293}
-        m_MethodName: Pratt
+        m_MethodName: Prat
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -6875,7 +6875,7 @@ RectTransform:
   m_RootOrder: 8
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 562.1935, y: -306.19135}
+  m_AnchoredPosition: {x: 562.3839, y: -306.09146}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &632800488
@@ -8455,7 +8455,7 @@ RectTransform:
   m_RootOrder: 9
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 712.1935, y: -306.19135}
+  m_AnchoredPosition: {x: 712.3839, y: -306.09146}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &704610443
@@ -9345,7 +9345,7 @@ RectTransform:
   m_RootOrder: 6
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 262.19348, y: -306.19135}
+  m_AnchoredPosition: {x: 262.3839, y: -306.09146}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &783011064
@@ -15557,7 +15557,7 @@ RectTransform:
   m_RootOrder: 7
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 412.19348, y: -306.19135}
+  m_AnchoredPosition: {x: 412.3839, y: -306.09146}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1199554851
@@ -19474,7 +19474,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: a2833f43946fd934795f4188fc42a5ab, type: 3}
   - {fileID: 21300000, guid: 58d7297805336e543b4d38040f6c7d3b, type: 3}
   - {fileID: 21300000, guid: a1f0d2352b945314baae4278ded38126, type: 3}
-  prat: {fileID: 0}
+  prat: {fileID: 2028710756}
   huaso: {fileID: 1674902723}
   machi: {fileID: 1177691886}
   lonco: {fileID: 1022445508}
@@ -21062,7 +21062,7 @@ RectTransform:
   m_RootOrder: 3
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 562.1935, y: -126.191345}
+  m_AnchoredPosition: {x: 562.3839, y: -126.09146}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1608415655
@@ -21408,7 +21408,7 @@ RectTransform:
   m_RootOrder: 1
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 262.19348, y: -126.191345}
+  m_AnchoredPosition: {x: 262.3839, y: -126.09146}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1656625147
@@ -22808,7 +22808,7 @@ RectTransform:
   m_RootOrder: 4
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 712.1935, y: -126.191345}
+  m_AnchoredPosition: {x: 712.3839, y: -126.09146}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1734378910
@@ -23246,7 +23246,7 @@ RectTransform:
   m_RootOrder: 2
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 412.19348, y: -126.191345}
+  m_AnchoredPosition: {x: 412.3839, y: -126.09146}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1779264736
@@ -27169,7 +27169,7 @@ RectTransform:
   m_RootOrder: 5
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 112.19348, y: -306.19135}
+  m_AnchoredPosition: {x: 112.38391, y: -306.09146}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2044411902
