@@ -14,7 +14,7 @@ public class CambiarPersonaje : MonoBehaviour {
 	public Sprite[] charaSprites;
 
 	// Personajes
-	public Image pratt;
+	public Image prat;
 	public Image huaso;
 	public Image machi;
 	public Image lonco;
@@ -24,8 +24,8 @@ public class CambiarPersonaje : MonoBehaviour {
 	public Image german;
 	public Image farkas;
 
-	public void Pratt() {
-		pratt.GetComponent<Image>().enabled = true;
+	public void Prat() {
+		prat.GetComponent<Image>().enabled = true;
 		huaso.GetComponent<Image>().enabled = false;
 		machi.GetComponent<Image>().enabled = false;
 		lonco.GetComponent<Image>().enabled = false;
@@ -37,12 +37,12 @@ public class CambiarPersonaje : MonoBehaviour {
 		selector.sprite = charaSprites[0];
 		panelPersonajes.SetActive(false);
 		panelMenu.SetActive(true);
-		PlayerPrefs.SetString("Skin", "Pratt");
+		PlayerPrefs.SetString("Skin", "Prat");
 
 	}
 
 	public void Huaso() {
-		pratt.GetComponent<Image>().enabled = false;
+		prat.GetComponent<Image>().enabled = false;
 		huaso.GetComponent<Image>().enabled = true;
 		machi.GetComponent<Image>().enabled = false;
 		lonco.GetComponent<Image>().enabled = false;
@@ -58,7 +58,7 @@ public class CambiarPersonaje : MonoBehaviour {
 	}
 
 	public void Machi() {
-		pratt.GetComponent<Image>().enabled = false;
+		prat.GetComponent<Image>().enabled = false;
 		huaso.GetComponent<Image>().enabled = false;
 		machi.GetComponent<Image>().enabled = true;
 		lonco.GetComponent<Image>().enabled = false;
@@ -74,7 +74,7 @@ public class CambiarPersonaje : MonoBehaviour {
 	}
 
 	public void Lonco() {
-		pratt.GetComponent<Image>().enabled = false;
+		prat.GetComponent<Image>().enabled = false;
 		huaso.GetComponent<Image>().enabled = false;
 		machi.GetComponent<Image>().enabled = false;
 		lonco.GetComponent<Image>().enabled = true;
@@ -90,7 +90,7 @@ public class CambiarPersonaje : MonoBehaviour {
 	}
 
 	public void Trauco() {
-		pratt.GetComponent<Image>().enabled = false;
+		prat.GetComponent<Image>().enabled = false;
 		huaso.GetComponent<Image>().enabled = false;
 		machi.GetComponent<Image>().enabled = false;
 		lonco.GetComponent<Image>().enabled = false;
@@ -106,7 +106,7 @@ public class CambiarPersonaje : MonoBehaviour {
 	}
 
 	public void Carabinero() {
-		pratt.GetComponent<Image>().enabled = false;
+		prat.GetComponent<Image>().enabled = false;
 		huaso.GetComponent<Image>().enabled = false;
 		machi.GetComponent<Image>().enabled = false;
 		lonco.GetComponent<Image>().enabled = false;
@@ -122,7 +122,7 @@ public class CambiarPersonaje : MonoBehaviour {
 	}
 
 	public void Bachelet() {
-		pratt.GetComponent<Image>().enabled = false;
+		prat.GetComponent<Image>().enabled = false;
 		huaso.GetComponent<Image>().enabled = false;
 		machi.GetComponent<Image>().enabled = false;
 		lonco.GetComponent<Image>().enabled = false;
@@ -138,7 +138,7 @@ public class CambiarPersonaje : MonoBehaviour {
 	}
 
 	public void German() {
-		pratt.GetComponent<Image>().enabled = false;
+		prat.GetComponent<Image>().enabled = false;
 		huaso.GetComponent<Image>().enabled = false;
 		machi.GetComponent<Image>().enabled = false;
 		lonco.GetComponent<Image>().enabled = false;
@@ -154,7 +154,7 @@ public class CambiarPersonaje : MonoBehaviour {
 	}
 
 	public void Farkas() {
-		pratt.GetComponent<Image>().enabled = false;
+		prat.GetComponent<Image>().enabled = false;
 		huaso.GetComponent<Image>().enabled = false;
 		machi.GetComponent<Image>().enabled = false;
 		lonco.GetComponent<Image>().enabled = false;
