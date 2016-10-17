@@ -26,6 +26,7 @@ public class Quiz : MonoBehaviour {
 	public Text totalGanado;
 	public float multiplicadorFloat;
 	private float totalFloat;
+	private int monedas;
 
 	// Siguiente Preguntas
 	private int numEtapa = 0;
@@ -99,7 +100,8 @@ public class Quiz : MonoBehaviour {
 		arrayPreguntas[numEtapa].SetActive(false);
 		cuentaPuntaje.SetActive(true);
 		totalFloat = puntaje*multiplicadorFloat;
-		Wallet.monedas += ((int)totalFloat);
+		monedas += ((int)totalFloat);
+		PlayerPrefs.SetInt("Monedas", PlayerPrefs.GetInt("Monedas")+monedas);
 		puntajeObtenido.GetComponent<Text>().enabled = true;
 		for (int i = 0; i <= puntaje; i++) {
 			puntajeObtenido.text = "" + i;

@@ -9,14 +9,17 @@ public class AumentarPrecio : MonoBehaviour {
 	public float subePorCompra;
 	public Button botonDeCompra;
 	public bool puedeComprar;
-	private int getMonedas;
+	public int monedas;
+
+	void Awake() {
+		monedas = PlayerPrefs.GetInt("Monedas");
+	}
 
 	public void Update () {
-		getMonedas = Wallet.monedas;
 		item = gameObject.GetComponent<Text>();
 		item.text = "$" + precioItem;
 
-		if (precioItem > getMonedas) {
+		if (precioItem > monedas) {
 			botonDeCompra.GetComponent<Button>().interactable = false;
 		} else {
 			botonDeCompra.GetComponent<Button>().interactable = true;

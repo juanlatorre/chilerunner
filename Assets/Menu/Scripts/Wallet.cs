@@ -7,12 +7,16 @@ public class Wallet : MonoBehaviour {
 	public Text txt;
 	public static int monedas;
 
-	void Start () {
+	void Awake() {
+		monedas = PlayerPrefs.GetInt("Monedas");
+	}
+
+	void Start() {
 		txt = gameObject.GetComponent<Text>();
 		txt.text = "" + monedas;	
 	}
 	
-	void Update () {
-		txt.text = "" + monedas;
+	void Update() {
+		txt.text = "" + PlayerPrefs.GetInt("Monedas");
 	}
 }
