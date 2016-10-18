@@ -14,6 +14,8 @@ public class Player: MonoBehaviour {
 	public Material skin;
 	public SunShafts sun;
 	public GameObject mainCanvas;
+	public GameObject sabiasqueCanvas;
+	public GameObject[] listaSabiasQue;
 
 	private Rigidbody2D rb;
 	private GameObject parachute, smoke, skeleton;
@@ -26,6 +28,7 @@ public class Player: MonoBehaviour {
 	private bool locked = true;
 	private ParticleSystem waterSparks;
 	private Animator anim,parach;
+	private int SabiasQueSelector;
 
 	void Awake(){
 		GameObject skin = transform.Find("Container/Skeleton/"+PlayerPrefs.GetString ("Skin")).gameObject;
@@ -144,11 +147,33 @@ public class Player: MonoBehaviour {
 		if (col.a < 10) {
 			transform.position = respawn.position;
 			startRunning ();
+			Time.timeScale = 0;
+			MostrarSabiasQue();
 			return;
 		}
 		col.a -= 8;
 		skin.SetColor("_Color",col);
 	}
+
+	void MostrarSabiasQue() {
+		mainCanvas.SetActive(false);
+		sabiasqueCanvas.SetActive(true);
+		SabiasQueSelector = ((int)Random.Range(0, 6));
+		listaSabiasQue[SabiasQueSelector].SetActive(true);				
+	}
+
+	public void ReiniciarJuego() {
+		Time.timeScale = 1;
+		mainCanvas.SetActive(true);
+		sabiasqueCanvas.SetActive(false);
+		listaSabiasQue[SabiasQueSelector].SetActive(false);
+	}
+
+	public void GoToMenu() {
+		PlayerPrefs.Save();
+		SceneManager.LoadScene(2);
+	}
+
 	void stopJumping(){
 		jumping = false;
 	}
@@ -200,11 +225,8 @@ public class Player: MonoBehaviour {
 		if (jumping) {
 			rb.velocity = new Vector2 (rb.velocity.x, 34);
 		}
+
 		rb.velocity = new Vector2 (speed, rb.velocity.y);
-
-
-
-
 		int h = Physics2D.RaycastNonAlloc(transform.position, -Vector2.up, hits);
 
 		if (readyToJump) {
@@ -300,6 +322,7 @@ public class Player: MonoBehaviour {
 			PlayerPrefs.SetInt (coll.gameObject.GetInstanceID().ToString(), 0);
 			coinCounter.text = PlayerPrefs.GetInt ("Coins").ToString();
 			coin.Play ();
+			PlayerPrefs.Save();
 		}
 		if (coll.gameObject.tag == "Ficha") {
 			Instantiate(sparks, coll.gameObject.transform.position, coll.gameObject.transform.rotation);
@@ -308,6 +331,7 @@ public class Player: MonoBehaviour {
 			PlayerPrefs.SetInt ("Coins", PlayerPrefs.GetInt ("Coins") + 1);
 			coinCounter.text = PlayerPrefs.GetInt ("Coins").ToString();
 			coin.Play ();
+			PlayerPrefs.Save();
 		}
 		if (coll.gameObject.tag == "Chili") {
 			Instantiate(chili, coll.gameObject.transform.position, coll.gameObject.transform.rotation);

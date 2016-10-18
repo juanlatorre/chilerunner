@@ -116,6 +116,7 @@ public class Quiz : MonoBehaviour {
 			yield return new WaitForSeconds(0.01f);
 		}
 		Debug.Log("Se acabó el Array");
+		PlayerPrefs.Save();
 	}
 	
 	public void Correcto(Button btnCorrect) {

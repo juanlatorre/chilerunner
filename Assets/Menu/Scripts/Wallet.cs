@@ -7,11 +7,8 @@ public class Wallet : MonoBehaviour {
 	public Text txt;
 	public static int monedas;
 
-	void Awake() {
-		monedas = PlayerPrefs.GetInt("Monedas");
-	}
-
 	void Start() {
+		monedas = PlayerPrefs.GetInt("Monedas");
 		txt = gameObject.GetComponent<Text>();
 		txt.text = "" + monedas;	
 	}
