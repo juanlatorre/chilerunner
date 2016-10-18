@@ -170,6 +170,7 @@ public class Player: MonoBehaviour {
 	}
 
 	public void GoToMenu() {
+		Time.timeScale = 1;
 		PlayerPrefs.Save();
 		SceneManager.LoadScene(2);
 	}
