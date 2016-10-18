@@ -1,4 +1,0 @@
-<Preguntas>
-	<Pregunta TextoPregunta="Una pregunta?" Respuesta1="Nada" Respuesta2="Si" Respuesta3="No" Respuesta4="Quizás" RespuestaCorrecta="2"/>
-    <Pregunta TextoPregunta="Otra pregunta?" Respuesta1="Nada" Respuesta2="Si" Respuesta3="No" Respuesta4="Quizás" RespuestaCorrecta="3"/>
-</Preguntas>

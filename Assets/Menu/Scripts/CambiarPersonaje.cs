@@ -19,7 +19,7 @@ public class CambiarPersonaje : MonoBehaviour {
 	public Image machi;
 	public Image lonco;
 	public Image trauco;
-	public Image carabinero;
+	public Image vidal;
 	public Image bachelet;
 	public Image german;
 	public Image farkas;
@@ -30,14 +30,14 @@ public class CambiarPersonaje : MonoBehaviour {
 		machi.GetComponent<Image>().enabled = false;
 		lonco.GetComponent<Image>().enabled = false;
 		trauco.GetComponent<Image>().enabled = false;
-		carabinero.GetComponent<Image>().enabled = false;
+		vidal.GetComponent<Image>().enabled = false;
 		bachelet.GetComponent<Image>().enabled = false;
 		german.GetComponent<Image>().enabled = false;
 		farkas.GetComponent<Image>().enabled = false;
 		selector.sprite = charaSprites[0];
 		panelPersonajes.SetActive(false);
 		panelMenu.SetActive(true);
-		PlayerPrefs.SetString("Skin", "Prat");
+		//PlayerPrefs.SetString("Skin", "Prat");
 
 	}
 
@@ -47,14 +47,14 @@ public class CambiarPersonaje : MonoBehaviour {
 		machi.GetComponent<Image>().enabled = false;
 		lonco.GetComponent<Image>().enabled = false;
 		trauco.GetComponent<Image>().enabled = false;
-		carabinero.GetComponent<Image>().enabled = false;
+		vidal.GetComponent<Image>().enabled = false;
 		bachelet.GetComponent<Image>().enabled = false;
 		german.GetComponent<Image>().enabled = false;
 		farkas.GetComponent<Image>().enabled = false;
 		selector.sprite = charaSprites[1];
 		panelPersonajes.SetActive(false);
 		panelMenu.SetActive(true);
-		PlayerPrefs.SetString("Skin", "Huaso");
+		//PlayerPrefs.SetString("Skin", "Huaso");
 	}
 
 	public void Machi() {
@@ -63,14 +63,14 @@ public class CambiarPersonaje : MonoBehaviour {
 		machi.GetComponent<Image>().enabled = true;
 		lonco.GetComponent<Image>().enabled = false;
 		trauco.GetComponent<Image>().enabled = false;
-		carabinero.GetComponent<Image>().enabled = false;
+		vidal.GetComponent<Image>().enabled = false;
 		bachelet.GetComponent<Image>().enabled = false;
 		german.GetComponent<Image>().enabled = false;
 		farkas.GetComponent<Image>().enabled = false;
 		selector.sprite = charaSprites[2];
 		panelPersonajes.SetActive(false);
 		panelMenu.SetActive(true);
-		PlayerPrefs.SetString("Skin", "Machi");
+		//PlayerPrefs.SetString("Skin", "Machi");
 	}
 
 	public void Lonco() {
@@ -79,14 +79,14 @@ public class CambiarPersonaje : MonoBehaviour {
 		machi.GetComponent<Image>().enabled = false;
 		lonco.GetComponent<Image>().enabled = true;
 		trauco.GetComponent<Image>().enabled = false;
-		carabinero.GetComponent<Image>().enabled = false;
+		vidal.GetComponent<Image>().enabled = false;
 		bachelet.GetComponent<Image>().enabled = false;
 		german.GetComponent<Image>().enabled = false;
 		farkas.GetComponent<Image>().enabled = false;
 		selector.sprite = charaSprites[3];
 		panelPersonajes.SetActive(false);
 		panelMenu.SetActive(true);
-		PlayerPrefs.SetString("Skin", "Lonco");
+		PlayerPrefs.SetString("Skin", "Mapuche");
 	}
 
 	public void Trauco() {
@@ -95,30 +95,30 @@ public class CambiarPersonaje : MonoBehaviour {
 		machi.GetComponent<Image>().enabled = false;
 		lonco.GetComponent<Image>().enabled = false;
 		trauco.GetComponent<Image>().enabled = true;
-		carabinero.GetComponent<Image>().enabled = false;
+		vidal.GetComponent<Image>().enabled = false;
 		bachelet.GetComponent<Image>().enabled = false;
 		german.GetComponent<Image>().enabled = false;
 		farkas.GetComponent<Image>().enabled = false;
 		selector.sprite = charaSprites[4];
 		panelPersonajes.SetActive(false);
 		panelMenu.SetActive(true);
-		PlayerPrefs.SetString("Skin", "Trauco");
+		//PlayerPrefs.SetString("Skin", "Trauco");
 	}
 
-	public void Carabinero() {
+	public void Vidal() {
 		prat.GetComponent<Image>().enabled = false;
 		huaso.GetComponent<Image>().enabled = false;
 		machi.GetComponent<Image>().enabled = false;
 		lonco.GetComponent<Image>().enabled = false;
 		trauco.GetComponent<Image>().enabled = false;
-		carabinero.GetComponent<Image>().enabled = true;
+		vidal.GetComponent<Image>().enabled = true;
 		bachelet.GetComponent<Image>().enabled = false;
 		german.GetComponent<Image>().enabled = false;
 		farkas.GetComponent<Image>().enabled = false;
 		selector.sprite = charaSprites[5];
 		panelPersonajes.SetActive(false);
 		panelMenu.SetActive(true);
-		PlayerPrefs.SetString("Skin", "Carabinero");
+		PlayerPrefs.SetString("Skin", "Vidal");
 	}
 
 	public void Bachelet() {
@@ -127,14 +127,14 @@ public class CambiarPersonaje : MonoBehaviour {
 		machi.GetComponent<Image>().enabled = false;
 		lonco.GetComponent<Image>().enabled = false;
 		trauco.GetComponent<Image>().enabled = false;
-		carabinero.GetComponent<Image>().enabled = false;
+		vidal.GetComponent<Image>().enabled = false;
 		bachelet.GetComponent<Image>().enabled = true;
 		german.GetComponent<Image>().enabled = false;
 		farkas.GetComponent<Image>().enabled = false;
 		selector.sprite = charaSprites[6];
 		panelPersonajes.SetActive(false);
 		panelMenu.SetActive(true);
-		PlayerPrefs.SetString("Skin", "Bachelet");
+		//PlayerPrefs.SetString("Skin", "Bachelet");
 	}
 
 	public void German() {
@@ -143,7 +143,7 @@ public class CambiarPersonaje : MonoBehaviour {
 		machi.GetComponent<Image>().enabled = false;
 		lonco.GetComponent<Image>().enabled = false;
 		trauco.GetComponent<Image>().enabled = false;
-		carabinero.GetComponent<Image>().enabled = false;
+		vidal.GetComponent<Image>().enabled = false;
 		bachelet.GetComponent<Image>().enabled = false;
 		german.GetComponent<Image>().enabled = true;
 		farkas.GetComponent<Image>().enabled = false;
@@ -159,13 +159,13 @@ public class CambiarPersonaje : MonoBehaviour {
 		machi.GetComponent<Image>().enabled = false;
 		lonco.GetComponent<Image>().enabled = false;
 		trauco.GetComponent<Image>().enabled = false;
-		carabinero.GetComponent<Image>().enabled = false;
+		vidal.GetComponent<Image>().enabled = false;
 		bachelet.GetComponent<Image>().enabled = false;
 		german.GetComponent<Image>().enabled = false;
 		farkas.GetComponent<Image>().enabled = true;
 		selector.sprite = charaSprites[8];
 		panelPersonajes.SetActive(false);
 		panelMenu.SetActive(true);
-		PlayerPrefs.SetString("Skin", "Farkas");
+		//PlayerPrefs.SetString("Skin", "Farkas");
 	}
 }
