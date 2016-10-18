@@ -104,7 +104,7 @@ public class Quiz : MonoBehaviour {
 		cuentaPuntaje.SetActive(true);
 		totalFloat = puntaje*multiplicadorFloat;
 		monedas += ((int)totalFloat);
-		PlayerPrefs.SetInt("Monedas", PlayerPrefs.GetInt("Monedas")+monedas);
+		PlayerPrefs.SetInt("Coins", PlayerPrefs.GetInt("Coins")+monedas);
 		puntajeObtenido.GetComponent<Text>().enabled = true;
 		for (int i = 0; i <= puntaje; i++) {
 			puntajeObtenido.text = "" + i;
