@@ -1,0 +1,35 @@
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2008
+
+Project("{A392965A-6784-E5A1-A552-9F76C91FF4F6}") = "chilerunner-master", "Assembly-CSharp-firstpass.csproj", "{9F31693D-12F2-E360-E1A9-CA8DD79199B1}"
+EndProject
+Project("{A392965A-6784-E5A1-A552-9F76C91FF4F6}") = "chilerunner-master", "Assembly-CSharp.csproj", "{F5E9C692-A19E-314D-57F4-31638D5E5D65}"
+EndProject
+Project("{A392965A-6784-E5A1-A552-9F76C91FF4F6}") = "chilerunner-master", "Assembly-CSharp-Editor.csproj", "{C1F61F8B-46BD-37BC-EBAF-7A2AD24B1A55}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9F31693D-12F2-E360-E1A9-CA8DD79199B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9F31693D-12F2-E360-E1A9-CA8DD79199B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9F31693D-12F2-E360-E1A9-CA8DD79199B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9F31693D-12F2-E360-E1A9-CA8DD79199B1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F5E9C692-A19E-314D-57F4-31638D5E5D65}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F5E9C692-A19E-314D-57F4-31638D5E5D65}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F5E9C692-A19E-314D-57F4-31638D5E5D65}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F5E9C692-A19E-314D-57F4-31638D5E5D65}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C1F61F8B-46BD-37BC-EBAF-7A2AD24B1A55}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C1F61F8B-46BD-37BC-EBAF-7A2AD24B1A55}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C1F61F8B-46BD-37BC-EBAF-7A2AD24B1A55}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C1F61F8B-46BD-37BC-EBAF-7A2AD24B1A55}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = Assembly-CSharp.csproj
+	EndGlobalSection
+EndGlobal
